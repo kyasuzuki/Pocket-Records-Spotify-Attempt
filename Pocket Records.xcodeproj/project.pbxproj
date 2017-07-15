@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09B946C61F1A7B23002B419E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B946C51F1A7B23002B419E /* AppDelegate.swift */; };
+		09B946C81F1A7B23002B419E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B946C71F1A7B23002B419E /* ViewController.swift */; };
+		09B946CB1F1A7B23002B419E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B946C91F1A7B23002B419E /* Main.storyboard */; };
+		09B946CD1F1A7B23002B419E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B946CC1F1A7B23002B419E /* Assets.xcassets */; };
+		09B946D01F1A7B23002B419E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B946CE1F1A7B23002B419E /* LaunchScreen.storyboard */; };
+		09B946DB1F1A7B23002B419E /* Pocket_RecordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B946DA1F1A7B23002B419E /* Pocket_RecordsTests.swift */; };
+		09B946E61F1A7B23002B419E /* Pocket_RecordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B946E51F1A7B23002B419E /* Pocket_RecordsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09B946D71F1A7B23002B419E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09B946BA1F1A7B22002B419E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09B946C11F1A7B23002B419E;
+			remoteInfo = "Pocket Records";
+		};
+		09B946E21F1A7B23002B419E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09B946BA1F1A7B22002B419E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09B946C11F1A7B23002B419E;
+			remoteInfo = "Pocket Records";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09B946C21F1A7B23002B419E /* Pocket Records.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Records.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09B946C51F1A7B23002B419E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09B946C71F1A7B23002B419E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09B946CA1F1A7B23002B419E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09B946CC1F1A7B23002B419E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09B946CF1F1A7B23002B419E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09B946D11F1A7B23002B419E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09B946D61F1A7B23002B419E /* Pocket RecordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket RecordsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09B946DA1F1A7B23002B419E /* Pocket_RecordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_RecordsTests.swift; sourceTree = "<group>"; };
+		09B946DC1F1A7B23002B419E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09B946E11F1A7B23002B419E /* Pocket RecordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket RecordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09B946E51F1A7B23002B419E /* Pocket_RecordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_RecordsUITests.swift; sourceTree = "<group>"; };
+		09B946E71F1A7B23002B419E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09B946BF1F1A7B23002B419E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B946D31F1A7B23002B419E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B946DE1F1A7B23002B419E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09B946B91F1A7B22002B419E = {
+			isa = PBXGroup;
+			children = (
+				09B946C41F1A7B23002B419E /* Pocket Records */,
+				09B946D91F1A7B23002B419E /* Pocket RecordsTests */,
+				09B946E41F1A7B23002B419E /* Pocket RecordsUITests */,
+				09B946C31F1A7B23002B419E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09B946C31F1A7B23002B419E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09B946C21F1A7B23002B419E /* Pocket Records.app */,
+				09B946D61F1A7B23002B419E /* Pocket RecordsTests.xctest */,
+				09B946E11F1A7B23002B419E /* Pocket RecordsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09B946C41F1A7B23002B419E /* Pocket Records */ = {
+			isa = PBXGroup;
+			children = (
+				09B946C51F1A7B23002B419E /* AppDelegate.swift */,
+				09B946C71F1A7B23002B419E /* ViewController.swift */,
+				09B946C91F1A7B23002B419E /* Main.storyboard */,
+				09B946CC1F1A7B23002B419E /* Assets.xcassets */,
+				09B946CE1F1A7B23002B419E /* LaunchScreen.storyboard */,
+				09B946D11F1A7B23002B419E /* Info.plist */,
+			);
+			path = "Pocket Records";
+			sourceTree = "<group>";
+		};
+		09B946D91F1A7B23002B419E /* Pocket RecordsTests */ = {
+			isa = PBXGroup;
+			children = (
+				09B946DA1F1A7B23002B419E /* Pocket_RecordsTests.swift */,
+				09B946DC1F1A7B23002B419E /* Info.plist */,
+			);
+			path = "Pocket RecordsTests";
+			sourceTree = "<group>";
+		};
+		09B946E41F1A7B23002B419E /* Pocket RecordsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				09B946E51F1A7B23002B419E /* Pocket_RecordsUITests.swift */,
+				09B946E71F1A7B23002B419E /* Info.plist */,
+			);
+			path = "Pocket RecordsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09B946C11F1A7B23002B419E /* Pocket Records */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09B946EA1F1A7B23002B419E /* Build configuration list for PBXNativeTarget "Pocket Records" */;
+			buildPhases = (
+				09B946BE1F1A7B23002B419E /* Sources */,
+				09B946BF1F1A7B23002B419E /* Frameworks */,
+				09B946C01F1A7B23002B419E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pocket Records";
+			productName = "Pocket Records";
+			productReference = 09B946C21F1A7B23002B419E /* Pocket Records.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09B946D51F1A7B23002B419E /* Pocket RecordsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09B946ED1F1A7B23002B419E /* Build configuration list for PBXNativeTarget "Pocket RecordsTests" */;
+			buildPhases = (
+				09B946D21F1A7B23002B419E /* Sources */,
+				09B946D31F1A7B23002B419E /* Frameworks */,
+				09B946D41F1A7B23002B419E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09B946D81F1A7B23002B419E /* PBXTargetDependency */,
+			);
+			name = "Pocket RecordsTests";
+			productName = "Pocket RecordsTests";
+			productReference = 09B946D61F1A7B23002B419E /* Pocket RecordsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09B946E01F1A7B23002B419E /* Pocket RecordsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09B946F01F1A7B23002B419E /* Build configuration list for PBXNativeTarget "Pocket RecordsUITests" */;
+			buildPhases = (
+				09B946DD1F1A7B23002B419E /* Sources */,
+				09B946DE1F1A7B23002B419E /* Frameworks */,
+				09B946DF1F1A7B23002B419E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09B946E31F1A7B23002B419E /* PBXTargetDependency */,
+			);
+			name = "Pocket RecordsUITests";
+			productName = "Pocket RecordsUITests";
+			productReference = 09B946E11F1A7B23002B419E /* Pocket RecordsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09B946BA1F1A7B22002B419E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Kya Suzuki";
+				TargetAttributes = {
+					09B946C11F1A7B23002B419E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					09B946D51F1A7B23002B419E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 09B946C11F1A7B23002B419E;
+					};
+					09B946E01F1A7B23002B419E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 09B946C11F1A7B23002B419E;
+					};
+				};
+			};
+			buildConfigurationList = 09B946BD1F1A7B22002B419E /* Build configuration list for PBXProject "Pocket Records" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09B946B91F1A7B22002B419E;
+			productRefGroup = 09B946C31F1A7B23002B419E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09B946C11F1A7B23002B419E /* Pocket Records */,
+				09B946D51F1A7B23002B419E /* Pocket RecordsTests */,
+				09B946E01F1A7B23002B419E /* Pocket RecordsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09B946C01F1A7B23002B419E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B946D01F1A7B23002B419E /* LaunchScreen.storyboard in Resources */,
+				09B946CD1F1A7B23002B419E /* Assets.xcassets in Resources */,
+				09B946CB1F1A7B23002B419E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B946D41F1A7B23002B419E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B946DF1F1A7B23002B419E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09B946BE1F1A7B23002B419E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B946C81F1A7B23002B419E /* ViewController.swift in Sources */,
+				09B946C61F1A7B23002B419E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B946D21F1A7B23002B419E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B946DB1F1A7B23002B419E /* Pocket_RecordsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B946DD1F1A7B23002B419E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B946E61F1A7B23002B419E /* Pocket_RecordsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09B946D81F1A7B23002B419E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09B946C11F1A7B23002B419E /* Pocket Records */;
+			targetProxy = 09B946D71F1A7B23002B419E /* PBXContainerItemProxy */;
+		};
+		09B946E31F1A7B23002B419E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09B946C11F1A7B23002B419E /* Pocket Records */;
+			targetProxy = 09B946E21F1A7B23002B419E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		09B946C91F1A7B23002B419E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09B946CA1F1A7B23002B419E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		09B946CE1F1A7B23002B419E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09B946CF1F1A7B23002B419E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09B946E81F1A7B23002B419E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09B946E91F1A7B23002B419E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09B946EB1F1A7B23002B419E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pocket Records/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.Pocket-Records";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		09B946EC1F1A7B23002B419E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pocket Records/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.Pocket-Records";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		09B946EE1F1A7B23002B419E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Pocket RecordsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.Pocket-RecordsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pocket Records.app/Pocket Records";
+			};
+			name = Debug;
+		};
+		09B946EF1F1A7B23002B419E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Pocket RecordsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.Pocket-RecordsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pocket Records.app/Pocket Records";
+			};
+			name = Release;
+		};
+		09B946F11F1A7B23002B419E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Pocket RecordsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.Pocket-RecordsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Pocket Records";
+			};
+			name = Debug;
+		};
+		09B946F21F1A7B23002B419E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Pocket RecordsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.Pocket-RecordsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Pocket Records";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09B946BD1F1A7B22002B419E /* Build configuration list for PBXProject "Pocket Records" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B946E81F1A7B23002B419E /* Debug */,
+				09B946E91F1A7B23002B419E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09B946EA1F1A7B23002B419E /* Build configuration list for PBXNativeTarget "Pocket Records" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B946EB1F1A7B23002B419E /* Debug */,
+				09B946EC1F1A7B23002B419E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		09B946ED1F1A7B23002B419E /* Build configuration list for PBXNativeTarget "Pocket RecordsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B946EE1F1A7B23002B419E /* Debug */,
+				09B946EF1F1A7B23002B419E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		09B946F01F1A7B23002B419E /* Build configuration list for PBXNativeTarget "Pocket RecordsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B946F11F1A7B23002B419E /* Debug */,
+				09B946F21F1A7B23002B419E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09B946BA1F1A7B22002B419E /* Project object */;
+}
