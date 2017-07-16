@@ -14,6 +14,12 @@
 		09B946D01F1A7B23002B419E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B946CE1F1A7B23002B419E /* LaunchScreen.storyboard */; };
 		09B946DB1F1A7B23002B419E /* Pocket_RecordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B946DA1F1A7B23002B419E /* Pocket_RecordsTests.swift */; };
 		09B946E61F1A7B23002B419E /* Pocket_RecordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B946E51F1A7B23002B419E /* Pocket_RecordsUITests.swift */; };
+		09B946F61F1A7BDB002B419E /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B946F41F1A7BDB002B419E /* SpotifyAudioPlayback.framework */; };
+		09B946F71F1A7BDB002B419E /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B946F51F1A7BDB002B419E /* SpotifyAuthentication.framework */; };
+		09B946F91F1A7CD2002B419E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B946F81F1A7CD2002B419E /* AVFoundation.framework */; };
+		09B946FB1F1A7CDA002B419E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B946FA1F1A7CDA002B419E /* SystemConfiguration.framework */; };
+		09B946FD1F1A83E2002B419E /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B946FC1F1A83E2002B419E /* SpotifyMetadata.framework */; };
+		09B947011F1A8472002B419E /* BridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B947001F1A8472002B419E /* BridgeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,14 @@
 		09B946E11F1A7B23002B419E /* Pocket RecordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket RecordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B946E51F1A7B23002B419E /* Pocket_RecordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_RecordsUITests.swift; sourceTree = "<group>"; };
 		09B946E71F1A7B23002B419E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09B946F41F1A7BDB002B419E /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		09B946F51F1A7BDB002B419E /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		09B946F81F1A7CD2002B419E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		09B946FA1F1A7CDA002B419E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		09B946FC1F1A83E2002B419E /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
+		09B946FE1F1A8471002B419E /* Pocket Records-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pocket Records-Bridging-Header.h"; sourceTree = "<group>"; };
+		09B946FF1F1A8472002B419E /* BridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeViewController.h; sourceTree = "<group>"; };
+		09B947001F1A8472002B419E /* BridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B946FD1F1A83E2002B419E /* SpotifyMetadata.framework in Frameworks */,
+				09B946FB1F1A7CDA002B419E /* SystemConfiguration.framework in Frameworks */,
+				09B946F91F1A7CD2002B419E /* AVFoundation.framework in Frameworks */,
+				09B946F61F1A7BDB002B419E /* SpotifyAudioPlayback.framework in Frameworks */,
+				09B946F71F1A7BDB002B419E /* SpotifyAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,12 +116,16 @@
 		09B946C41F1A7B23002B419E /* Pocket Records */ = {
 			isa = PBXGroup;
 			children = (
+				09B946F31F1A7BB4002B419E /* Frameworks */,
 				09B946C51F1A7B23002B419E /* AppDelegate.swift */,
 				09B946C71F1A7B23002B419E /* ViewController.swift */,
 				09B946C91F1A7B23002B419E /* Main.storyboard */,
 				09B946CC1F1A7B23002B419E /* Assets.xcassets */,
 				09B946CE1F1A7B23002B419E /* LaunchScreen.storyboard */,
 				09B946D11F1A7B23002B419E /* Info.plist */,
+				09B946FF1F1A8472002B419E /* BridgeViewController.h */,
+				09B947001F1A8472002B419E /* BridgeViewController.m */,
+				09B946FE1F1A8471002B419E /* Pocket Records-Bridging-Header.h */,
 			);
 			path = "Pocket Records";
 			sourceTree = "<group>";
@@ -123,6 +146,19 @@
 				09B946E71F1A7B23002B419E /* Info.plist */,
 			);
 			path = "Pocket RecordsUITests";
+			sourceTree = "<group>";
+		};
+		09B946F31F1A7BB4002B419E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09B946FC1F1A83E2002B419E /* SpotifyMetadata.framework */,
+				09B946FA1F1A7CDA002B419E /* SystemConfiguration.framework */,
+				09B946F81F1A7CD2002B419E /* AVFoundation.framework */,
+				09B946F41F1A7BDB002B419E /* SpotifyAudioPlayback.framework */,
+				09B946F51F1A7BDB002B419E /* SpotifyAuthentication.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +229,7 @@
 				TargetAttributes = {
 					09B946C11F1A7B23002B419E = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					09B946D51F1A7B23002B419E = {
@@ -259,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B947011F1A8472002B419E /* BridgeViewController.m in Sources */,
 				09B946C81F1A7B23002B419E /* ViewController.swift in Sources */,
 				09B946C61F1A7B23002B419E /* AppDelegate.swift in Sources */,
 			);
@@ -414,10 +452,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Pocket Records/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Pocket-Records";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pocket Records/Pocket Records-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +472,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Pocket Records/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Pocket-Records";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pocket Records/Pocket Records-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -507,6 +560,7 @@
 				09B946EC1F1A7B23002B419E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09B946ED1F1A7B23002B419E /* Build configuration list for PBXNativeTarget "Pocket RecordsTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +569,7 @@
 				09B946EF1F1A7B23002B419E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09B946F01F1A7B23002B419E /* Build configuration list for PBXNativeTarget "Pocket RecordsUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +578,7 @@
 				09B946F21F1A7B23002B419E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
