@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class SongTableViewController: UITableViewController {
     
@@ -101,15 +102,58 @@ class SongTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+        case "AddItem":
+            os_log("Adding a new song.", log: OSLog.default, type: .debug)
+        case "ShowDetail":
+            guard let songDetailViewController = segue.destination as? CanvasViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedSongCell = sender as? SongTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedSongCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedSong = songs[indexPath.row]
+            songDetailViewController.song = selectedSong
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
+        }
     }
-    */
+    
+    
+    // MARK: Actions
+    
+    @IBAction func unwindToSongList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? CanvasViewController, let song = sourceViewController.song {
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing song.
+                songs[selectedIndexPath.row] = song
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+            else{
+            // Add a new song.
+            let newIndexPath = IndexPath(row: songs.count, section: 0)
+            
+            songs.append(song)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+        }
+        
+    }
 
     //MARK: Private Methods
     

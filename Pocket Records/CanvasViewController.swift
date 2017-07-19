@@ -7,17 +7,27 @@
 //
 
 import UIKit
+import os.log
 
 class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var song: Song?
     
     // MARK: Properties
     
     @IBOutlet weak var photoImageView: UIImageView!
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Set up views if editing an existing Song.
+        if let song = song {
+            navigationItem.title = song.songTitle
+            photoImageView.image = song.canvasImage
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +85,33 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: Navigation
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    // This method lets you configure a view controller before it's presented.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        // Configure the destination view controller only when the save button is pressed.
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        let photo = photoImageView.image
+        
+        song?.canvasImage = photo
+        
+        // only passing the canvasImage so don't need to worry about passing the entire song object -->
+        //let defaultImage = UIImage(named: "default")
+        // Set the song to be passed to SongTableViewController after the unwind segue.
+        //song = Song(songTitle: "Song Title", songArtist: "Song Artist", albumImage: defaultImage, canvasImage: photo)
+        // may just need to pass the canvas image? may need to pass it all? do i need to pass it as a song??????????????????????????
+    }
     
     // MARK: Actions
     

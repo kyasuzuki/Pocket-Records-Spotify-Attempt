@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2WF-2K-YAq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x7r-Z6-3EB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Song Table View Controller-->
+        <!--Your Records-->
         <scene sceneID="lxu-sh-3V3">
             <objects>
                 <tableViewController id="2WF-2K-YAq" customClass="SongTableViewController" customModule="Pocket_Records" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,6 +103,7 @@
                                     <outlet property="canvasImageView" destination="gnK-EQ-6P4" id="7Xx-Xz-QeD"/>
                                     <outlet property="songArtistLabel" destination="kBl-Pe-HkT" id="nPb-ht-98Y"/>
                                     <outlet property="songTitleLabel" destination="Fmt-qL-gcb" id="oPb-bl-Pv1"/>
+                                    <segue destination="KI7-N3-hhs" kind="show" identifier="ShowDetail" id="hse-YI-h8Z"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -111,12 +112,19 @@
                             <outlet property="delegate" destination="2WF-2K-YAq" id="KND-aO-Sz9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your Records" id="SNH-Tg-3kp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="w5J-pM-eWd">
+                            <connections>
+                                <segue destination="49r-Gn-uHK" kind="show" identifier="AddItem" id="4qg-T1-bKR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eh2-Nt-gNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-626.39999999999998" y="-494.30284857571218"/>
+            <point key="canvasLocation" x="312.80000000000001" y="-494.30284857571218"/>
         </scene>
-        <!--Canvas View Controller-->
+        <!--New Canvas-->
         <scene sceneID="RAf-g1-trb">
             <objects>
                 <viewController id="KI7-N3-hhs" customClass="CanvasViewController" customModule="Pocket_Records" customModuleProvider="target" sceneMemberID="viewController">
@@ -143,13 +151,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Canvas" id="QWp-Ba-Gqp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aO7-2K-ncG">
+                            <connections>
+                                <action selector="cancel:" destination="KI7-N3-hhs" id="XbQ-nH-0I2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="45X-4v-2kl">
+                            <connections>
+                                <segue destination="msf-Ct-QeJ" kind="unwind" unwindAction="unwindToSongListWithSender:" id="rzw-1j-klb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoImageView" destination="sGS-Ut-E2d" id="YGd-pb-1Aw"/>
+                        <outlet property="saveButton" destination="45X-4v-2kl" id="qPL-1C-AFS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Dj-1O-faY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="msf-Ct-QeJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="247.19999999999999" y="-524.8875562218891"/>
+            <point key="canvasLocation" x="2128.8000000000002" y="-494.30284857571218"/>
         </scene>
         <!--Spotify View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -177,7 +199,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+            <point key="canvasLocation" x="860" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8zw-jC-mq0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x7r-Z6-3EB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qCf-zi-hO4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2WF-2K-YAq" kind="relationship" relationship="rootViewController" id="wIw-mi-d6f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66M-n1-3YT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626.39999999999998" y="-494.30284857571218"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KUk-nH-vHO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="49r-Gn-uHK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PLY-ix-77f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KI7-N3-hhs" kind="relationship" relationship="rootViewController" id="N4n-iQ-HSF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fS8-Ta-E9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="-953"/>
         </scene>
     </scenes>
     <resources>
@@ -185,4 +243,7 @@
         <image name="play" width="64" height="64"/>
         <image name="previous" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hse-YI-h8Z"/>
+    </inferredMetricsTieBreakers>
 </document>
