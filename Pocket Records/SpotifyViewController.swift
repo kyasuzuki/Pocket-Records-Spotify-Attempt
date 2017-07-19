@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SpotifyViewController.swift
 //  Pocket Records
 //
 //  Created by Kya Suzuki on 7/15/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SpotifyViewController: UIViewController {
     
     var auth = SPTAuth.defaultInstance()!
     var session:SPTSession!
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         setup()
         //let myObj = "hi" as Any
-        NotificationCenter.default.addObserver(self,selector:#selector(ViewController.updateAfterFirstLogin), name: NSNotification.Name("update"), object: nil)
+        NotificationCenter.default.addObserver(self,selector:#selector(SpotifyViewController.updateAfterFirstLogin), name: NSNotification.Name("update"), object: nil)
         // removed #selector to rid of error that said "cannot invoke value with an argument list of type selector"
     }
     

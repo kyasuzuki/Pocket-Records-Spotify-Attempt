@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // 5- Add session to User Defaults
                 let userDefaults = UserDefaults.standard
                 self.test = userDefaults
-                let sessionData = NSKeyedArchiver.archivedData(withRootObject: session as AnyObject) // off of medium website, also have error --> we cast the type to any to silence the error; originally asked for a default value
+                let sessionData = NSKeyedArchiver.archivedData(withRootObject: session as AnyObject) 
                 userDefaults.set(sessionData, forKey: "SpotifySession")
                 userDefaults.synchronize()
                 // 6 - Tell notification center login is successful
