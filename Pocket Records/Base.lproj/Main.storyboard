@@ -136,20 +136,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty2-ky-iks">
-                                <rect key="frame" x="16" y="623" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="camera"/>
-                                <connections>
-                                    <action selector="cameraHandler:" destination="KI7-N3-hhs" eventType="touchUpInside" id="VcK-Zf-Vwa"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sGS-Ut-E2d">
-                                <rect key="frame" x="0.0" y="46" width="375" height="569"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sGS-Ut-E2d" userLabel="photo Image View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="551"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mP0-DW-rtp" userLabel="draw Image View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="551"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="bpK-eL-Alg">
+                                <rect key="frame" x="23" y="623" width="342" height="27"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty2-ky-iks">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="27"/>
+                                        <state key="normal" image="camera"/>
+                                        <connections>
+                                            <action selector="cameraHandler:" destination="KI7-N3-hhs" eventType="touchUpInside" id="TzY-AH-K1u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdB-xU-gc9">
+                                        <rect key="frame" x="80" y="0.0" width="26" height="27"/>
+                                        <state key="normal" image="draw"/>
+                                        <connections>
+                                            <action selector="drawHandler:" destination="KI7-N3-hhs" eventType="touchUpInside" id="vst-Kh-PFL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NU-Un-VJS">
+                                        <rect key="frame" x="161" y="0.0" width="25" height="27"/>
+                                        <state key="normal" image="type"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pV9-GQ-F7w">
+                                        <rect key="frame" x="241" y="0.0" width="28" height="27"/>
+                                        <state key="normal" image="calendar"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHN-ha-DAF">
+                                        <rect key="frame" x="324" y="0.0" width="18" height="27"/>
+                                        <state key="normal" image="trash"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                        <constraints>
+                            <constraint firstItem="sGS-Ut-E2d" firstAttribute="leading" secondItem="nC0-kw-Vow" secondAttribute="leading" id="3oY-xv-3VP"/>
+                            <constraint firstItem="utt-p7-wjX" firstAttribute="top" secondItem="bpK-eL-Alg" secondAttribute="bottom" constant="17" id="H12-R5-gWl"/>
+                            <constraint firstItem="bpK-eL-Alg" firstAttribute="leading" secondItem="nC0-kw-Vow" secondAttribute="leadingMargin" constant="7" id="Jh0-ID-lcp"/>
+                            <constraint firstAttribute="trailing" secondItem="sGS-Ut-E2d" secondAttribute="trailing" id="RoS-vP-AgC"/>
+                            <constraint firstItem="bpK-eL-Alg" firstAttribute="top" secondItem="sGS-Ut-E2d" secondAttribute="bottom" constant="8" symbolic="YES" id="nCI-bh-P0U"/>
+                            <constraint firstItem="sGS-Ut-E2d" firstAttribute="top" secondItem="MSL-fK-yYV" secondAttribute="bottom" id="psg-kf-d5D"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Canvas" id="QWp-Ba-Gqp">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aO7-2K-ncG">
@@ -164,6 +199,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="drawImageView" destination="mP0-DW-rtp" id="7RO-Sy-tXY"/>
                         <outlet property="photoImageView" destination="sGS-Ut-E2d" id="YGd-pb-1Aw"/>
                         <outlet property="saveButton" destination="45X-4v-2kl" id="qPL-1C-AFS"/>
                     </connections>
@@ -239,11 +275,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" width="28" height="27"/>
+        <image name="camera" width="25" height="19"/>
+        <image name="draw" width="26" height="26"/>
         <image name="pause" width="64" height="64"/>
         <image name="play" width="64" height="64"/>
         <image name="previous" width="64" height="64"/>
+        <image name="trash" width="18" height="25"/>
+        <image name="type" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hse-YI-h8Z"/>
+        <segue reference="N4n-iQ-HSF"/>
     </inferredMetricsTieBreakers>
 </document>

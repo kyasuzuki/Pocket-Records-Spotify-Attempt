@@ -17,6 +17,8 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBOutlet weak var drawImageView: UIImageView!
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
   
 
@@ -75,6 +77,55 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
+    // MARK: DrawImageView
+    
+    
+    
+    var lastPoint = CGPoint.zero
+    var swiped = false
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        swiped = false
+        if let touch = touches.first {
+            lastPoint = touch.location(in: self.drawImageView)
+        }
+    }
+    
+    func drawLines(fromPoint:CGPoint, toPoint:CGPoint){
+    UIGraphicsBeginImageContext(self.drawImageView.frame.size)
+        drawImageView.image?.draw(in: CGRect(x: 0, y: 0, width: self.drawImageView.frame.width, height: self.drawImageView.frame.height))
+        let context = UIGraphicsGetCurrentContext()
+        
+        context?.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
+        context?.addLine(to: CGPoint(x: toPoint.x, y: toPoint.y))
+        
+        context?.setBlendMode(CGBlendMode.normal)
+        context?.setLineCap(CGLineCap.round)
+        context?.setLineWidth(5)
+        context?.setStrokeColor(UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor)
+        
+        context?.strokePath()
+        drawImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        swiped = true
+        
+        if let touch = touches.first{
+            let currentPoint = touch.location(in: self.drawImageView)
+            drawLines(fromPoint: lastPoint, toPoint: currentPoint)
+            lastPoint = currentPoint
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if !swiped {
+            drawLines(fromPoint: lastPoint, toPoint: lastPoint)
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -113,9 +164,19 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
-        let photo = photoImageView.image
         
+        if (photoImageView.isHidden == false){
+        let photo = photoImageView.image
         song?.canvasImage = photo
+        }else if (drawImageView.isHidden == false){
+            let photo = drawImageView.image
+            song?.canvasImage = photo
+        }
+        else
+        { let photo = UIImage(named: "default")
+        song?.canvasImage = photo
+        }
+        
         
         // only passing the canvasImage so don't need to worry about passing the entire song object -->
         //let defaultImage = UIImage(named: "default")
@@ -127,7 +188,13 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
     // MARK: Actions
     
     @IBAction func cameraHandler(_ sender: UIButton) {
-        cameraPopup()
+        drawImageView.isHidden = true
+        photoImageView.isHidden = false
+            cameraPopup()
     }
-
+    
+    @IBAction func drawHandler(_ sender: UIButton) {
+        photoImageView.isHidden = true
+        drawImageView.isHidden = false
+    }
 }
