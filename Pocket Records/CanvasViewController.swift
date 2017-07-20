@@ -89,7 +89,18 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
     // MARK: Navigation
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
+        let isPresentingInAddSongMode = presentingViewController is UINavigationController
+        
+        // when adding a song but cancel
+        if isPresentingInAddSongMode {
+            dismiss(animated: true, completion: nil)
+        }else if let owningNavigationController = navigationController{
+        // when editing a song's canvas but cancel
+        owningNavigationController.popViewController(animated: true)
+        }else {
+            fatalError("The CanvasViewController is not inside a navigation controller.")
+        }
     }
     
     

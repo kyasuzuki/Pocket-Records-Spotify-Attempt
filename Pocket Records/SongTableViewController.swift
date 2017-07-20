@@ -18,8 +18,16 @@ class SongTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Use the edit button item provided by the table view controller.
+        navigationItem.leftBarButtonItem = editButtonItem
+        
+        // Load any saved songs, otherwise load sample data.
+        if let savedSongs = loadSongs() {
+            songs += savedSongs
+        }else{
         // Load the sample data.
         loadSampleSongs()
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -67,25 +75,27 @@ class SongTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            songs.remove(at: indexPath.row)
+            saveSongs()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -151,6 +161,8 @@ class SongTableViewController: UITableViewController {
             songs.append(song)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+            // Save the songs.
+            saveSongs()
         }
         
     }
@@ -177,7 +189,19 @@ class SongTableViewController: UITableViewController {
         }
         
         songs += [song1, song2, song3]
-        
+    }
+    
+    private func saveSongs() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(songs, toFile: Song.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Songs successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save songs...", log: OSLog.default, type: .error)
+        }
+    }
+    
+    private func loadSongs() -> [Song]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Song.ArchiveURL.path) as? [Song]
     }
     
 }
