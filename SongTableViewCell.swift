@@ -18,15 +18,19 @@ class SongTableViewCell: UITableViewCell {
     
     @IBOutlet weak var albumImageView: UIImageView!
     
+
     @IBOutlet weak var canvasImageView: UIImageView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    
 
         // Configure the view for the selected state
     }

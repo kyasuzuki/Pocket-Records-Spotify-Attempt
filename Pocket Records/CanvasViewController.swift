@@ -9,7 +9,7 @@
 import UIKit
 import os.log
 
-class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
     var song: Song?
     
@@ -19,11 +19,16 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var drawImageView: UIImageView!
     
+    
+    @IBOutlet weak var textView: UITextView!
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
   
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.textView.delegate = self
+
 
         // Set up views if editing an existing Song.
         if let song = song {
@@ -126,6 +131,39 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
+    // MARK: Text View
+    
+       
+//    func textViewImage() -> UIImage {
+//        
+//        UIGraphicsBeginImageContext(textView.contentSize)
+//        
+//        let savedContentOffset: CGPoint = textView.contentOffset
+//        let savedFrame: CGRect = textView.frame
+//        
+//        textView.contentOffset = CGPoint.zero
+//        textView.frame = CGRect(x:0 , y: 0, width: textView.contentSize.width, height: textView.contentSize.height)
+//        
+//        textView.layer.render(in: UIGraphicsGetCurrentContext()!)
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        
+//        textView.contentOffset = savedContentOffset
+//        textView.frame = savedFrame
+//        
+//        UIGraphicsEndImageContext()
+//        
+//        return image!
+//    }
+    
+     //dismisses keyboard when press return on toggle keyboard
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -187,14 +225,30 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     // MARK: Actions
     
-    @IBAction func cameraHandler(_ sender: UIButton) {
+    
+    @IBAction func cameraHandler(_ sender: UIBarButtonItem) {
         drawImageView.isHidden = true
+        textView.isHidden = true
         photoImageView.isHidden = false
-            cameraPopup()
+        cameraPopup()
+
     }
     
-    @IBAction func drawHandler(_ sender: UIButton) {
+    @IBAction func textHandler(_ sender: UIBarButtonItem) {
         photoImageView.isHidden = true
+        drawImageView.isHidden = true
+        textView.isHidden = false
+        textView.becomeFirstResponder()
+
+    }
+    
+    
+    @IBAction func drawHandler(_ sender: UIBarButtonItem) {
+        photoImageView.isHidden = true
+        textView.isHidden = true
         drawImageView.isHidden = false
     }
+    
+    
+    
 }

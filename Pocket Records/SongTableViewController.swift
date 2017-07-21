@@ -22,6 +22,7 @@ class SongTableViewController: UITableViewController {
         navigationItem.leftBarButtonItem = editButtonItem
         
         // Load any saved songs, otherwise load sample data.
+        
         if let savedSongs = loadSongs() {
             songs += savedSongs
         }else{
@@ -70,6 +71,7 @@ class SongTableViewController: UITableViewController {
         cell.songArtistLabel.text = song.songArtist
         cell.albumImageView.image = song.albumImage
         cell.canvasImageView.image = song.canvasImage
+      
 
         return cell
     }

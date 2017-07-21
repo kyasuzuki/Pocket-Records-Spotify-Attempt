@@ -18,6 +18,7 @@ class Song: NSObject, NSCoding {
     var albumImage: UIImage?
     var canvasImage: UIImage?
     
+    
     // MARK: Archiving Paths
     
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -30,12 +31,13 @@ class Song: NSObject, NSCoding {
         static let songArtist = "songArtist"
         static let albumImage = "albumImage"
         static let canvasImage = "canvasImage"
-    }
+            }
     
     //MARK: Initialization
     
     
-    init?(songTitle: String, songArtist: String, albumImage: UIImage?, canvasImage: UIImage?) {
+    init?(songTitle: String, songArtist: String, albumImage: UIImage?, canvasImage: UIImage?)
+    {
         
         // Initialization should fail if there is no name or if the rating is negative.
         if songTitle.isEmpty {
@@ -47,6 +49,7 @@ class Song: NSObject, NSCoding {
         self.songArtist = songArtist
         self.albumImage = albumImage
         self.canvasImage = canvasImage
+       
         
     }
     
@@ -56,6 +59,7 @@ class Song: NSObject, NSCoding {
         aCoder.encode(songArtist, forKey: PropertyKey.songArtist)
         aCoder.encode(albumImage, forKey: PropertyKey.albumImage)
         aCoder.encode(canvasImage, forKey: PropertyKey.canvasImage)
+      
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -71,6 +75,8 @@ class Song: NSObject, NSCoding {
         // Because albumImage and canvasImage are optional properties of Song, just use the conditional cast.
         let albumImage = aDecoder.decodeObject(forKey: PropertyKey.albumImage) as? UIImage
         let canvasImage = aDecoder.decodeObject(forKey: PropertyKey.canvasImage) as? UIImage
+        
+        
         
         // Must call designated initializer.
         self.init(songTitle: songTitle, songArtist: songArtist, albumImage: albumImage, canvasImage: canvasImage)
